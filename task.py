@@ -57,10 +57,11 @@ def get_count_house_categories(categories: list[str]) -> dict[str, int]:
     :param categories: Список категорий домов.
     :return: Словарь с количеством домов в каждой категории.
     """
-    keys = set(categories)
     count_house_categories = {}
-    for category in keys:
-        count_house_categories[category] = categories.count(category)
+    for category in categories:
+        if category not in count_house_categories:
+            count_house_categories[category] = 0
+        count_house_categories[category] += 1
     return count_house_categories
 
 
