@@ -1,3 +1,4 @@
+import csv
 def read_file(filename: str) -> list[dict]:
     """Читает данные из CSV файла и преобразует их в список словарей.
 
@@ -89,4 +90,3 @@ if __name__ == '__main__':
     min_area_address = min_area_residential(data_list)
     print("Адрес дома с наименьшей площадью на одного жителя:")
     print(min_area_address)
-
